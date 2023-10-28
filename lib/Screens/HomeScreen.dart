@@ -1,13 +1,12 @@
-import 'package:dio/dio.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qouts_first_api/Componat/ImageCustom.dart';
 import '../Componat/TextCustom.dart';
-import '../view_model/api_cubit.dart';
+import '../viewModel/api_cubit.dart';
+
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                       )
-                    : Center(
+                    : const Center(
                         child:CircularProgressIndicator(),
                       );
               },

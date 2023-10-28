@@ -6,14 +6,14 @@ class QoutesModel {
 
   QoutesModel.fromJson(Map<String, dynamic> json) {
     qotdDate = json['qotd_date'];
-    quote = json['quote'] != null ? new Quote.fromJson(json['quote']) : null;
+    quote = json['quote'] != null ? Quote.fromJson(json['quote']) : null;
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['qotd_date'] = this.qotdDate;
-    if (this.quote != null) {
-      data['quote'] = this.quote!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['qotd_date'] = qotdDate;
+    if (quote != null) {
+      data['quote'] = quote!.toJson();
     }
     return data;
   }
@@ -60,18 +60,18 @@ class Quote {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['dialogue'] = this.dialogue;
-    data['private'] = this.private;
-    data['tags'] = this.tags;
-    data['url'] = this.url;
-    data['favorites_count'] = this.favoritesCount;
-    data['upvotes_count'] = this.upvotesCount;
-    data['downvotes_count'] = this.downvotesCount;
-    data['author'] = this.author;
-    data['author_permalink'] = this.authorPermalink;
-    data['body'] = this.body;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['id'] = id;
+    data['dialogue'] = dialogue;
+    data['private'] = private;
+    data['tags'] = tags;
+    data['url'] = url;
+    data['favorites_count'] = favoritesCount;
+    data['upvotes_count'] = upvotesCount;
+    data['downvotes_count'] = downvotesCount;
+    data['author'] = author;
+    data['author_permalink'] = authorPermalink;
+    data['body'] = body;
     return data;
   }
 }

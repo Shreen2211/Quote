@@ -21,7 +21,6 @@ class DioHelper {
           await dio?.get(endpoint, data: body, queryParameters: Params);
       return response!;
     } catch (e) {
-      print(e.toString());
       rethrow;
     }
   }
